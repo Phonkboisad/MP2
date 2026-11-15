@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sadman Bin Morshed | CSE Portfolio — CSE-2340 MP2</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v4 Browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- ==================== 1. NAVIGATION BAR ==================== -->
+  <header id="navbar" class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Main Navigation">
+      <!-- Brand / Logo -->
+      <a href="#hero" class="flex items-center gap-2 text-lg font-bold tracking-tight text-white hover:text-sky-400 transition-colors">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500/15 text-sky-400 border border-sky-500/30 font-mono text-sm">
+          SB
+        </span>
+        <span>Sadman<span class="text-sky-400">.dev</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <li><a href="#about" class="hover:text-sky-400 transition-colors">About</a></li>
+        <li><a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a></li>
+        <li><a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a></li>
+        <li><a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a></li>
+      </ul>
+
+      <!-- Desktop CTA Button -->
+      <div class="hidden md:block">
+        <a href="https://github.com/phonkboisad" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-sky-400 transition-colors">
+          GitHub Profile
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-800 p-2 text-slate-300 hover:bg-slate-900 hover:text-white md:hidden">
+        <span class="sr-only">Open main menu</span>
+        <svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden border-t border-slate-800 bg-slate-950 px-4 pt-3 pb-5 md:hidden">
+      <ul class="flex flex-col space-y-3 text-base font-medium text-slate-300">
+        <li><a href="#about" class="mobile-nav-link block rounded-lg px-3 py-2 hover:bg-slate-900 hover:text-sky-400">About</a></li>
+        <li><a href="#projects" class="mobile-nav-link block rounded-lg px-3 py-2 hover:bg-slate-900 hover:text-sky-400">Projects</a></li>
+        <li><a href="#skills" class="mobile-nav-link block rounded-lg px-3 py-2 hover:bg-slate-900 hover:text-sky-400">Skills</a></li>
+        <li><a href="#contact" class="mobile-nav-link block rounded-lg px-3 py-2 hover:bg-slate-900 hover:text-sky-400">Contact</a></li>
+        <li class="pt-2">
+          <a href="https://github.com/phonkboisad" target="_blank" rel="noopener noreferrer"
+             class="block w-full rounded-lg bg-sky-500 px-4 py-2.5 text-center text-sm font-semibold text-slate-950 hover:bg-sky-400">
+            Visit GitHub (@phonkboisad)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="hero" class="relative overflow-hidden border-b border-slate-800/70 py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3.5 py-1 text-xs font-semibold tracking-wide text-sky-400 uppercase">
+            CSE Undergrad • IIUC • Chattogram
+          </span>
+
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Hi, I'm <span class="text-sky-400">Sadman Bin Morshed</span>.
+          </h1>
+
+          <p class="mt-6 text-base leading-relaxed text-slate-300 sm:text-lg">
+            Computer Science and Engineering student building embedded ESP32 hardware systems, campus automation bots, full-stack web tools, and offensive security labs.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a href="#projects"
+               class="rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/20 hover:bg-sky-400 transition-all">
+              Explore Projects
+            </a>
+            <a href="#contact"
+               class="rounded-lg border border-slate-700 bg-slate-900/70 px-6 py-3 text-sm font-semibold text-slate-200 hover:border-sky-500/50 hover:text-white transition-all">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. ABOUT SECTION ==================== -->
+    <section id="about" class="border-b border-slate-800/70 py-16 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">About Me</h2>
+            <p class="mt-4 text-slate-300 leading-relaxed">
+              I am an undergraduate Computer Science and Engineering student at <strong class="text-white">International Islamic University Chittagong (IIUC)</strong>. My work bridges low-level microcontroller prototyping and modern cloud-hosted software tools.
+            </p>
+            <p class="mt-4 text-slate-300 leading-relaxed">
+              Outside coursework in Data Structures, Computer Networks, and Software Development (CSE-2340), I build competitive line-following robots, maintain open-source campus utilities, and train in wireless cybersecurity.
+            </p>
+          </div>
+
+          <!-- Quick Academic & Highlight Stats -->
+          <div class="grid grid-cols-2 gap-4 lg:col-span-5">
+            <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+              <p class="text-xs font-medium uppercase tracking-wider text-slate-400">University</p>
+              <p class="mt-2 text-lg font-bold text-white">IIUC</p>
+              <p class="mt-1 text-xs text-slate-400">Dept. of CSE</p>
+            </article>
+            <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+              <p class="text-xs font-medium uppercase tracking-wider text-slate-400">Certification</p>
+              <p class="mt-2 text-lg font-bold text-sky-400">GH-900</p>
+              <p class="mt-1 text-xs text-slate-400">GitHub Foundations</p>
+            </article>
+            <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+              <p class="text-xs font-medium uppercase tracking-wider text-slate-400">Hardware Focus</p>
+              <p class="mt-2 text-lg font-bold text-white">ESP32 & LFR</p>
+              <p class="mt-1 text-xs text-slate-400">Embedded Systems</p>
+            </article>
+            <article class="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+              <p class="text-xs font-medium uppercase tracking-wider text-slate-400">Cloud & Linux</p>
+              <p class="mt-2 text-lg font-bold text-white">Azure & Kali</p>
+              <p class="mt-1 text-xs text-slate-400">Ubuntu Server & Security</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. PROJECTS SECTION ==================== -->
+    <section id="projects" class="border-b border-slate-800/70 py-16 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Featured Projects</h2>
+            <p class="mt-2 text-sm text-slate-400">Filter by domain or click any card to inspect technical details.</p>
+          </div>
+
+          <!-- Interactive Filter Buttons -->
+          <div id="filter-buttons" class="flex flex-wrap gap-2" role="group" aria-label="Filter projects by category">
+            <button type="button" data-category="all"
+                    class="filter-btn active rounded-lg bg-sky-500 px-3.5 py-1.5 text-xs font-semibold text-slate-950 transition-colors">
+              All
+            </button>
+            <button type="button" data-category="hardware"
+                    class="filter-btn rounded-lg border border-slate-800 bg-slate-900 px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:border-sky-500/50 transition-colors">
+              Hardware & Robotics
+            </button>
+            <button type="button" data-category="web"
+                    class="filter-btn rounded-lg border border-slate-800 bg-slate-900 px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:border-sky-500/50 transition-colors">
+              Web & Automation
+            </button>
+            <button type="button" data-category="security"
+                    class="filter-btn rounded-lg border border-slate-800 bg-slate-900 px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:border-sky-500/50 transition-colors">
+              Cybersecurity
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid (Populated via JavaScript) -->
+        <div id="projects-grid" class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- JavaScript renders project cards here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. TECHNICAL SKILLS SECTION ==================== -->
+    <section id="skills" class="border-b border-slate-800/70 py-16 sm:py-24">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Technical Stack</h2>
+        <p class="mt-2 text-sm text-slate-400">Core languages, frameworks, and tools used across coursework and builds.</p>
+
+        <div id="skills-grid" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- JavaScript renders skill categories here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT SECTION ==================== -->
+    <section id="contact" class="py-16 sm:py-24">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 sm:p-10">
+          <h2 class="text-2xl font-bold tracking-tight text-white sm:text-3xl">Send a Message</h2>
+          <p class="mt-2 text-sm text-slate-400">
+            Have a question about a project, collaboration, or CSE-2340 coursework? Drop a note below.
+          </p>
+
+          <form id="contact-form" class="mt-6 space-y-5" novalidate>
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div>
+                <label for="sender-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                  Your Name
+                </label>
+                <input id="sender-name" name="name" type="text" required placeholder="e.g., Tanvir Ahmed"
+                       class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-sky-500 focus:outline-none" />
+              </div>
+              <div>
+                <label for="sender-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                  Email Address
+                </label>
+                <input id="sender-email" name="email" type="email" required placeholder="you@example.com"
+                       class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-sky-500 focus:outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label for="sender-message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+                Message
+              </label>
+              <textarea id="sender-message" name="message" rows="4" required placeholder="Write your message here..."
+                        class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-sky-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-sky-400 transition-colors sm:w-auto">
+              Send Message
+            </button>
+
+            <!-- Interactive Form Feedback Banner -->
+            <p id="form-feedback" class="hidden rounded-lg border px-4 py-3 text-sm font-medium"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer id="footer" class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-400">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <p>&copy; <span id="current-year"></span> Sadman Bin Morshed. Built for CSE-2340 (Software Development I).</p>
+      <div class="flex items-center gap-5">
+        <a href="#hero" class="hover:text-sky-400 transition-colors">Back to Top</a>
+        <a href="https://github.com/phonkboisad" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 8. INTERACTIVE PROJECT MODAL ==================== -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span id="modal-badge" class="inline-block rounded-full bg-sky-500/15 px-3 py-0.5 text-xs font-semibold text-sky-400"></span>
+          <h3 id="modal-title" class="mt-2 text-xl font-bold text-white"></h3>
+        </div>
+        <button id="close-modal-btn" type="button" aria-label="Close modal"
+                class="rounded-lg border border-slate-700 p-1.5 text-slate-400 hover:bg-slate-800 hover:text-white">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <p id="modal-description" class="mt-4 text-sm leading-relaxed text-slate-300"></p>
+
+      <div class="mt-5">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Technologies Used</p>
+        <div id="modal-tags" class="mt-2 flex flex-wrap gap-2"></div>
+      </div>
+
+      <div class="mt-6 flex justify-end">
+        <button id="modal-done-btn" type="button"
+                class="rounded-lg bg-sky-500 px-4 py-2 text-xs font-semibold text-slate-950 hover:bg-sky-400 transition-colors">
+          Close Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 9. JAVASCRIPT (DATA & INTERACTIVITY) ==================== -->
+  <script>
+    // 1. Array of Project Objects
+    const projects = [
+      {
+        id: 1,
+        title: "CircuitPal ESP32 Companion",
+        category: "hardware",
+        categoryLabel: "Hardware & Robotics",
+        summary: "Portable ESP32 hardware assistant with an OLED interface and physical button navigation for electronics labs.",
+        details: "Developed with two teammates using an ESP32 microcontroller, 0.96-inch I2C OLED display, and tactile button matrix. Provides quick pinout references, resistor color decoding, and serial diagnostics on the workbench.",
+        tags: ["ESP32", "C++ / Arduino", "OLED I2C", "Circuit Design"]
+      },
+      {
+        id: 2,
+        title: "WhatsApp Campus Notice Bot",
+        category: "web",
+        categoryLabel: "Web & Automation",
+        summary: "Automated WhatsApp notice and class routine broadcaster built for university CSE student groups.",
+        details: "Powered by Node.js, @whiskeysockets/baileys, SQLite, and PM2 on an Ubuntu Server VM. Automates routine alerts, department notices, and command-based schedule lookups for classmates and CRs.",
+        tags: ["Node.js", "SQLite", "Baileys API", "PM2 / Linux"]
+      },
+      {
+        id: 3,
+        title: "Competitive Line-Following Robot",
+        category: "hardware",
+        categoryLabel: "Hardware & Robotics",
+        summary: "High-speed PID-controlled LFR built on a custom chassis with an 8-channel reflectance array.",
+        details: "Combines an ESP32-S controller, QTR-8RC IR sensor array, TB6612FNG dual motor driver, N20 400 RPM micro gear motors, and a 3S LiPo regulated via an LM2596 buck converter.",
+        tags: ["ESP32-S", "PID Control", "QTR-8RC", "TB6612FNG"]
+      },
+      {
+        id: 4,
+        title: "Campus Book Exchange Portal",
+        category: "web",
+        categoryLabel: "Web & Automation",
+        summary: "Peer-to-peer academic book marketplace with cover OCR scanning and Open Library metadata lookup.",
+        details: "Helps university students donate, buy, and sell textbooks. Integrates client-side Tesseract.js OCR to extract book titles from camera photos and fetches bibliographic metadata via Open Library APIs.",
+        tags: ["HTML5", "Tailwind CSS", "Tesseract.js", "REST API"]
+      },
+      {
+        id: 5,
+        title: "Wireless Security & Packet Lab",
+        category: "security",
+        categoryLabel: "Cybersecurity",
+        summary: "Hands-on wireless auditing and network packet analysis environment using Kali Linux.",
+        details: "Configured monitor-mode Realtek adapters, packet capture workflows, and local CTF lab environments to study 802.11 frame behavior, defensive hardening, and vulnerability assessment.",
+        tags: ["Kali Linux", "Wireshark", "Networking", "CTF Labs"]
+      },
+      {
+        id: 6,
+        title: "WinIsland Rotating CD Plugin",
+        category: "web",
+        categoryLabel: "Web & Automation",
+        summary: "Open-source desktop media widget plugin with automated GitHub Actions release pipelines.",
+        details: "Contributed a rotating album-art CD widget plugin to WinIslandProject and automated build packaging using GitHub Actions workflows.",
+        tags: ["Open Source", "GitHub Actions", "UI Plugin"]
+      }
+    ];
+
+    // 2. Array of Skill Category Objects
+    const skillGroups = [
+      {
+        heading: "Languages",
+        items: ["C / C++", "JavaScript (ES6+)", "Python", "HTML5 & CSS3", "SQL"]
+      },
+      {
+        heading: "Web & Cloud",
+        items: ["Tailwind CSS v4", "Node.js & PM2", "REST APIs", "Microsoft Azure", "Git & GitHub Actions"]
+      },
+      {
+        heading: "Embedded & Hardware",
+        items: ["ESP32 / ESP32-S", "Sensor & Motor Drivers", "PID Control Loops", "Cirkit Designer"]
+      },
+      {
+        heading: "Security & OS",
+        items: ["Kali Linux", "Ubuntu Server 24.04", "Packet Analysis", "SSH & Firewall Hardening"]
+      }
+    ];
+
+    // 3. DOM References
+    const projectsGrid = document.getElementById("projects-grid");
+    const skillsGrid = document.getElementById("skills-grid");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIconOpen = document.getElementById("menu-icon-open");
+    const menuIconClose = document.getElementById("menu-icon-close");
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+    // Modal DOM References
+    const projectModal = document.getElementById("project-modal");
+    const modalBadge = document.getElementById("modal-badge");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const modalTags = document.getElementById("modal-tags");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    const modalDoneBtn = document.getElementById("modal-done-btn");
+
+    // Contact Form DOM References
+    const contactForm = document.getElementById("contact-form");
+    const formFeedback = document.getElementById("form-feedback");
+
+    // 4. Render Project Cards Function
+    function renderProjects(filterCategory = "all") {
+      const filteredProjects = filterCategory === "all"
+        ? projects
+        : projects.filter((project) => project.category === filterCategory);
+
+      projectsGrid.innerHTML = filteredProjects.map((project) => `
+        <article class="flex flex-col justify-between rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-sky-500/50 hover:-translate-y-1 transition-all duration-200">
+          <div>
+            <span class="inline-block rounded-full bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-400">
+              ${project.categoryLabel}
+            </span>
+            <h3 class="mt-4 text-lg font-bold text-white">${project.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-300">${project.summary}</p>
+          </div>
+
+          <div class="mt-6">
+            <div class="flex flex-wrap gap-1.5">
+              ${project.tags.map((tag) => `
+                <span class="rounded-md bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300">\${tag}</span>
+              `).join("")}
+            </div>
+
+            <button type="button" onclick="openProjectModal(${project.id})"
+                    class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors cursor-pointer">
+              View Technical Details
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    // 5. Render Skill Cards Function
+    function renderSkills() {
+      skillsGrid.innerHTML = skillGroups.map((group) => `
+        <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <h3 class="text-base font-bold text-sky-400">${group.heading}</h3>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            ${group.items.map((item) => `
+              <li class="flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                <span>\${item}</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+      `).join("");
+    }
+
+    // 6. Interactive Filter Button Handling
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach((btn) => {
+          btn.classList.remove("bg-sky-500", "text-slate-950");
+          btn.classList.add("border", "border-slate-800", "bg-slate-900", "text-slate-300");
+        });
+
+        button.classList.remove("border", "border-slate-800", "bg-slate-900", "text-slate-300");
+        button.classList.add("bg-sky-500", "text-slate-950");
+
+        const selectedCategory = button.getAttribute("data-category");
+        renderProjects(selectedCategory);
+      });
+    });
+
+    // 7. Interactive Modal Controls
+    function openProjectModal(projectId) {
+      const selected = projects.find((item) => item.id === projectId);
+      if (!selected) return;
+
+      modalBadge.textContent = selected.categoryLabel;
+      modalTitle.textContent = selected.title;
+      modalDescription.textContent = selected.details;
+      modalTags.innerHTML = selected.tags.map((tag) => `
+        <span class="rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1 text-xs font-medium text-sky-300">${tag}</span>
+      `).join("");
+
+      projectModal.classList.remove("hidden");
+      projectModal.classList.add("flex");
+    }
+
+    function closeProjectModal() {
+      projectModal.classList.add("hidden");
+      projectModal.classList.remove("flex");
+    }
+
+    closeModalBtn.addEventListener("click", closeProjectModal);
+    modalDoneBtn.addEventListener("click", closeProjectModal);
+    projectModal.addEventListener("click", (event) => {
+      if (event.target === projectModal) closeProjectModal();
+    });
+
+    // 8. Mobile Navigation Menu Toggle
+    mobileMenuBtn.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      mobileMenuBtn.setAttribute("aria-expanded", String(!isHidden));
+      menuIconOpen.classList.toggle("hidden", !isHidden);
+      menuIconClose.classList.toggle("hidden", isHidden);
+    });
+
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenuBtn.setAttribute("aria-expanded", "false");
+        menuIconOpen.classList.remove("hidden");
+        menuIconClose.classList.add("hidden");
+      });
+    });
+
+    // 9. Interactive Contact Form Validation
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const nameValue = document.getElementById("sender-name").value.trim();
+      const emailValue = document.getElementById("sender-email").value.trim();
+      const messageValue = document.getElementById("sender-message").value.trim();
+
+      formFeedback.classList.remove("hidden", "border-rose-500/40", "bg-rose-500/10", "text-rose-300", "border-emerald-500/40", "bg-emerald-500/10", "text-emerald-300");
+
+      if (!nameValue || !emailValue || !emailValue.includes("@") || !messageValue) {
+        formFeedback.textContent = "Please fill in your name, a valid email address, and a message.";
+        formFeedback.classList.add("border-rose-500/40", "bg-rose-500/10", "text-rose-300");
+        return;
+      }
+
+      formFeedback.textContent = `Thanks, ${nameValue}! Your message has been recorded.`;
+      formFeedback.classList.add("border-emerald-500/40", "bg-emerald-500/10", "text-emerald-300");
+      contactForm.reset();
+    });
+
+    // 10. Initialize Page on Load
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    renderProjects("all");
+    renderSkills();
+  </script>
+</body>
+</html>
